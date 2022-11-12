@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JPDB Card Creator</title>
+	<style>
+		:root {
+			--background-color: #181818;
+			--text-color: #bbb;
+			--pitch-high-s: rgb(232, 104, 123);
+			--pitch-high-e: rgba(232, 104, 123, 0);
+			--pitch-low-s: rgb(78, 134, 202);
+			--pitch-low-e: rgb(78, 134, 202, 0);
+			--kanji-fill-color: #444;
+			--kanji-stroke-color: #444;
+		}
+
+		body {
+			width: 300px;
+			background-color: var(--background-color);
+			color: var(--text-color);
+		}
+
+		.part-of-speech {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+		}
+
+		.greyed-out {
+			opacity: 0.5;
+		}
+
+		.ch {
+			fill: var(--kanji-fill-color);
+			stroke: var(--kanji-stroke-color);
+		}
+
+		.sn,
+		.sn-bg {
+			transition: all ease 0.1s;
+		}
+
+		.sn {
+			fill: white;
+		}
+
+		.sn-bg {
+			fill: rgba(0, 100, 255, 0.66);
+		}
+
+		.sn-d {
+			stroke: #00ffff;
+			fill: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="popup"></div>
+	<script src="popup.js"></script>
+</body>
+
+</html>

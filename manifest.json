@@ -1,0 +1,22 @@
+{
+	"name": "JPDB Card Extractor",
+	"version": "0.0.0.1",
+	"manifest_version": 3,
+	"description": "An extension to extract Anki cards from JPDB.",
+	"icons": {
+		"128": "icons/cardextractor128x128.png"
+	},
+	"action": {
+		"default_popup": "popup/popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content-scripts/content.js"
+			]
+		}
+	]
+}
