@@ -47,7 +47,9 @@ function getPitchAccentNode() {
 		return null;
 	}
 	pitchNode = pitchNode.cloneNode(true)
-	pitchNode.querySelector('div').removeChild(pitchNode.querySelector('a'));
+    for (let reading of pitchNode.querySelectorAll(':scope > div')) {
+    	reading.removeChild(reading.querySelector('a'));
+    }
 	return pitchNode;
 }
 
